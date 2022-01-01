@@ -1,0 +1,17 @@
+{
+	"autoload": {
+		"psr-4": {
+			"SIPL\\UCRM\\Holidays\\": "src/"
+		}
+	},
+	"config": {
+		"platform": {
+			"php": "7.3.26"
+		}
+	},
+	"require": {
+		"php": ">=7.3",
+		"ubnt/ucrm-plugin-sdk": "^0.8.1",
+		"umulmrum/holiday": "^0.6.0"
+	}
+}

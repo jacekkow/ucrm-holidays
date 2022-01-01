@@ -1,0 +1,147 @@
+{
+	"version": "1",
+	"information": {
+		"name": "holidays",
+		"displayName": "Holidays skipper",
+		"description": "Changes invoice due date if it is on a day off (holiday, weekend)",
+		"url": "https://github.com/jacekkow/ucrm-holidays",
+		"version": "0.1",
+		"ucrmVersionCompliancy": {
+			"min": "3.0.0-beta2",
+			"max": null
+		},
+		"unmsVersionCompliancy": {
+			"min": "1.0.0-dev.1",
+			"max": null
+		},
+		"author": "Jacek Kowalski"
+	},
+	"configuration": [
+		{
+			"key": "holidays_region",
+			"label": "Holidays region",
+			"type": "choice",
+			"required": 0,
+			"choices": {
+				"-": "",
+				"Austria": "AT",
+				"Austria (Burgenland)": "AT-1",
+				"Austria (Carinthia)": "AT-2",
+				"Austria (LowerAustria)": "AT-3",
+				"Austria (UpperAustria)": "AT-4",
+				"Austria (Salzburg)": "AT-5",
+				"Austria (Styria)": "AT-6",
+				"Austria (Tyrol)": "AT-7",
+				"Austria (Vorarlberg)": "AT-8",
+				"Austria (Vienna)": "AT-9",
+				"Belgium": "BE",
+				"Brazil": "BR",
+				"Denmark": "DK",
+				"France": "FR",
+				"France (Bas-Rhin)": "FR-67",
+				"France (Haut-Rhin)": "FR-68",
+				"France (Moselle)": "FR-57",
+				"France (French Guiana)": "FR-GF",
+				"France (Guadeloupe)": "FR-GUA",
+				"France (Martinique)": "FR-MQ",
+				"France (Réunion)": "FR-LRE",
+				"Germany": "DE",
+				"Germany (Baden-Württemberg)": "DE-BW",
+				"Germany (Bavaria)": "DE-BY",
+				"Germany (Berlin)": "DE-BE",
+				"Germany (Brandenburg)": "DE-BB",
+				"Germany (Bremen)": "DE-HB",
+				"Germany (Hamburg)": "DE-HH",
+				"Germany (Hesse)": "DE-HE",
+				"Germany (Mecklenburg-Vorpommern)": "DE-MV",
+				"Germany (Lower Saxony)": "DE-NI",
+				"Germany (North Rhine-Westphalia)": "DE-NW",
+				"Germany (Rhineland-Palatinate)": "DE-RP",
+				"Germany (Saarland)": "DE-SL",
+				"Germany (Saxony)": "DE-SN",
+				"Germany (Saxony-Anhalt)": "DE-ST",
+				"Germany (Schleswig-Holstein)": "DE-SH",
+				"Germany (Thuringia)": "DE-TH",
+				"Ireland": "IE",
+				"Italy": "IT",
+				"Italy (South Tyrol)": "IT-32",
+				"Liechtenstein": "FL",
+				"Luxembourg": "LU",
+				"Mexico": "MX",
+				"Netherlands": "NL",
+				"Poland": "PL",
+				"Russia": "RU",
+				"Spain": "ES",
+				"Switzerland": "CH",
+				"Switzerland (Appenzell Ausserrhoden)": "CH-AR",
+				"Switzerland (Appenzell Innerrhoden)": "CH-AI",
+				"Switzerland (Basel-Landschaft)": "CH-BL",
+				"Switzerland (Basel-Stadt)": "CH-BS",
+				"Switzerland (Bern)": "CH-BE",
+				"Switzerland (Fribourg)": "CH-FR",
+				"Switzerland (Geneva)": "CH-GE",
+				"Switzerland (Glarus)": "CH-GL",
+				"Switzerland (Grisons)": "CH-GR",
+				"Switzerland (Jura)": "CH-JU",
+				"Switzerland (Lucerne)": "CH-LU",
+				"Switzerland (Neuchâtel)": "CH-NE",
+				"Switzerland (Nidwalden)": "CH-NW",
+				"Switzerland (Obwalden)": "CH-OW",
+				"Switzerland (Schaffhausen)": "CH-SH",
+				"Switzerland (Schwyz)": "CH-SZ",
+				"Switzerland (Solothurn)": "CH-SO",
+				"Switzerland (St. Gallen)": "CH-SG",
+				"Switzerland (Thurgau)": "CH-TG",
+				"Switzerland (Ticino)": "CH-TI",
+				"Switzerland (Uri)": "CH-UR",
+				"Switzerland (Valais)": "CH-VS",
+				"Switzerland (Vaud)": "CH-VD",
+				"Switzerland (Zug)": "CH-ZG",
+				"Switzerland (Zürich)": "CH-ZH",
+				"USA": "US"
+			}
+		},
+		{
+			"key": "holidays_weekday_1",
+			"label": "Skip Mondays",
+			"type": "checkbox",
+			"required": 0
+		},
+		{
+			"key": "holidays_weekday_2",
+			"label": "Skip Tuesdays",
+			"type": "checkbox",
+			"required": 0
+		},
+		{
+			"key": "holidays_weekday_3",
+			"label": "Skip Wednesdays",
+			"type": "checkbox",
+			"required": 0
+		},
+		{
+			"key": "holidays_weekday_4",
+			"label": "Skip Thursdays",
+			"type": "checkbox",
+			"required": 0
+		},
+		{
+			"key": "holidays_weekday_5",
+			"label": "Skip Fridays",
+			"type": "checkbox",
+			"required": 0
+		},
+		{
+			"key": "holidays_weekday_6",
+			"label": "Skip Saturdays",
+			"type": "checkbox",
+			"required": 0
+		},
+		{
+			"key": "holidays_weekday_7",
+			"label": "Skip Sundays",
+			"type": "checkbox",
+			"required": 0
+		}
+	]
+}

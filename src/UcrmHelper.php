@@ -3,9 +3,9 @@
 namespace SIPL\UCRM\Holidays;
 
 class UcrmHelper {
-	protected $rootDirectory;
-	protected $api = NULL;
-	protected $config = NULL;
+	protected string $rootDirectory;
+	protected ?\Ubnt\UcrmPluginSdk\Service\UcrmApi $api = NULL;
+	protected ?array $config = NULL;
 	protected $event = NULL;
 
 	function __construct(?string $rootDirectory = NULL) {
@@ -15,18 +15,18 @@ class UcrmHelper {
 		$this->rootDirectory = $rootDirectory;
 	}
 
-	function getRootDirectory() {
+	function getRootDirectory(): string {
 		return $this->rootDirectory;
 	}
 
-	function getApi() {
+	function getApi(): \Ubnt\UcrmPluginSdk\Service\UcrmApi {
 		if ($this->api === NULL) {
 			$this->api = \Ubnt\UcrmPluginSdk\Service\UcrmApi::create($this->rootDirectory);
 		}
 		return $this->api;
 	}
 
-	function getConfig() {
+	function getConfig(): array {
 		if ($this->config === NULL) {
 			$configManager = \Ubnt\UcrmPluginSdk\Service\PluginConfigManager::create($this->rootDirectory);
 			$this->config = $configManager->loadConfig();
@@ -34,7 +34,7 @@ class UcrmHelper {
 		return $this->config;
 	}
 
-	function getCurrentEvent() {
+	function getCurrentEvent(): array {
 		if ($this->event === NULL) {
 			try {
 				if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {

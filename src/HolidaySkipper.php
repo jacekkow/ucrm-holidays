@@ -8,15 +8,15 @@ use Umulmrum\Holiday\HolidayCalculator;
 use Umulmrum\Holiday\Model\HolidayList;
 
 class HolidaySkipper {
-	protected $helper;
-	protected $skipDays = null;
-	protected $holidays = null;
+	protected UcrmHelper $helper;
+	protected ?array $skipDays = null;
+	protected ?HolidayList $holidays = null;
 
 	function __construct(UcrmHelper $ucrmHelper) {
 		$this->helper = $ucrmHelper;
 	}
 
-	protected function configure(array $years) {
+	protected function configure(array $years): void {
 		$config = $this->helper->getConfig();
 
 		if ($this->skipDays === NULL) {
@@ -39,7 +39,7 @@ class HolidaySkipper {
 		}
 	}
 
-	function processInvoice(string $invoiceId) {
+	function processInvoice(string $invoiceId): bool {
 		$crm = $this->helper->getApi();
 		$invoiceData = $crm->get('/invoices/' . $invoiceId);
 		if ($invoiceData['status'] != 0) {
@@ -71,5 +71,7 @@ class HolidaySkipper {
 		} else {
 			echo 'Invoice ' . $invoiceId . ': nothing to do' . "\n";
 		}
+
+		return $changed > 0;
 	}
 }

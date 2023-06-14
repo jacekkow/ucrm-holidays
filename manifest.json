@@ -5,7 +5,7 @@
 		"displayName": "Holidays skipper",
 		"description": "Changes invoice due date if it is on a day off (holiday, weekend)",
 		"url": "https://github.com/jacekkow/ucrm-holidays",
-		"version": "0.1",
+		"version": "1.0",
 		"ucrmVersionCompliancy": {
 			"min": "4.0.0",
 			"max": null

@@ -7,7 +7,7 @@
 		"url": "https://github.com/jacekkow/ucrm-holidays",
 		"version": "0.1",
 		"ucrmVersionCompliancy": {
-			"min": "3.0.0-beta2",
+			"min": "4.0.0",
 			"max": null
 		},
 		"unmsVersionCompliancy": {
